@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+    <Library>
+        <Books category="Technical">
+            <Book ISBN="1841314754">
+                <title>Technical Graphics £rd Edition</title>
+                <author>Philip O’Callaghan</author>
+            </Book>
+            <Book ISBN="0871706938">
+                <title>ENgineers Guide to Technical Writing</title>
+                <author>Kenneth G. Budinski</author>
+            </Book>
+        </Books>
+        <Books category="Cookery">
+            <Book ISBN="0091753562">
+                <title>Good Housekeeping Cookery Book</title>
+                <author>Good Housekeeping</author>
+            </Book>
+            <Book ISBN="1911667001">
+                <title>Four Seasons Cookery Book</title>
+                <author>Margeret Costa</author>
+            </Book>
+        </Books>
+    </Library>
