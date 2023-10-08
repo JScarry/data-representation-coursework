@@ -4,8 +4,7 @@ filename = "library.xml"
 
 doc = parse(filename)
 #with open(filename) as fp:
-#    doc = parse(fp)
-
+    #doc = parse(fp)
 BookNodeList = doc.getElementsByTagName("Book")
 print(len(BookNodeList))
 for bookNode in BookNodeList:

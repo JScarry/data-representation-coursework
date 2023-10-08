@@ -1,12 +1,12 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
     <Library>
         <Books category="Technical">
             <Book ISBN="1841314754">
                 <title>Technical Graphics 3rd Edition</title>
-                <author>Philip O’Callaghan</author>
+                <author>Philip O'Callaghan</author>
             </Book>
             <Book ISBN="0871706938">
-                <title>ENgineers Guide to Technical Writing</title>
+                <title>Engineers Guide to Technical Writing</title>
                 <author>Kenneth G. Budinski</author>
             </Book>
         </Books>
