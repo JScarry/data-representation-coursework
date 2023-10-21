@@ -41,8 +41,8 @@ if __name__ == "__main__":
         'Title':"testaatitle",
         "Price": 4321
     }
-    #print(getAllBooks())
+    print(getAllBooks())
     #print(getBookById(303))
     #print(deleteBook(317))
     #print (createBook(book))
-    print(updateBook(316, bookdiff))  # update book id xxx with bookdiff
+    #print(updateBook(316, bookdiff))  # update book id xxx with bookdiff
