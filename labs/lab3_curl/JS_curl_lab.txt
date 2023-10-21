@@ -1,0 +1,54 @@
+Microsoft Windows [Version 10.0.19045.3324]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\JS>curl google.com
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="http://www.google.com/">here</A>.
+</BODY></HTML>
+
+C:\Users\JS>curl -i google.com
+HTTP/1.1 301 Moved Permanently
+Location: http://www.google.com/
+Content-Type: text/html; charset=UTF-8
+Content-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-_sQEjgN6TxV0vBBC3OXgrg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+Date: Sat, 21 Oct 2023 16:22:55 GMT
+Expires: Mon, 20 Nov 2023 16:22:55 GMT
+Cache-Control: public, max-age=2592000
+Server: gws
+Content-Length: 219
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="http://www.google.com/">here</A>.
+</BODY></HTML>
+
+C:\Users\JS>curl http://andrewbeatty1.pythonanywhere.com/books
+[{"Author":"Test124","Price":5,"Title":"Test","id":122},{"Author":"adf","Price":32,"Title":"Skills needed by a Data Scientist","id":163},{"Author":"andrew","Price":12,"Title":"javascript","id":179},{"Author":"andrew","Price":122,"Title":"javascript","id":180},{"Author":"Roy Keane","Price":155,"Title":"The Second Half","id":181},{"Author":"andrew","Price":10000000,"Title":"javascript","id":183},{"Author":"andrew","Price":10000000,"Title":"javascript","id":184},{"Author":"andrew","Price":10000000,"Title":"javascript","id":185},{"Author":"shane","Price":2,"Title":"test","id":193},{"Author":"mark","Price":22,"Title":"dog","id":195},{"Author":"JK Rowling","Price":999,"Title":"magic","id":197},{"Author":"Andrew","Price":12,"Title":"Javascript","id":198},{"Author":"Me","Price":3000,"Title":"My Book","id":280},{"Author":"Sean","Price":30,"Title":"Coding for Dummies","id":281},{"Author":"ooo","Price":20000,"Title":"HelloWorld!","id":285},{"Author":"Orla","Price":19000,"Title":"HelloWorld2!","id":286},{"Author":"OrlaC","Price":10,"Title":"LovePython!","id":290},{"Author":"asdfsd","Price":11111,"Title":"overviewasd","id":321},{"Author":"test test test","Price":2222,"Title":"testing title","id":324},{"Author":"test test test","Price":123412,"Title":"testing title","id":326},{"Author":"test","Price":123,"Title":"test title","id":328},{"Author":"Jroche","Price":4,"Title":"API Consumption","id":330},{"Author":"TestDiff","Price":4,"Title":"testedDiff","id":331}]
+
+C:\Users\JS>curl http://andrewbeatty1.pythonanywhere.com/books/17
+{}
+
+C:\Users\JS>curl -H "Content-Type:application/json" -X POST -d "{\"Title\":\"xxx\",\"Author\":\"xxx\",\"Price\":3000}" http://andrewbeatty1.pythonanywhere.com/books
+{"Author":"xxx","Price":3000,"Title":"xxx","id":332}
+
+C:\Users\JS>curl -H "Content-Type:application/json" -X PUT -d "{\"Price\":2000}" http://andrewbeatty1.pythonanywhere.com/books/332
+{"Author":"xxx","Price":2000,"Title":"xxx","id":332}
+
+C:\Users\JS>curl -X DELETE http://andrewbeatty1.pythonanywhere.com/books/??
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>405 Method Not Allowed</title>
+<h1>Method Not Allowed</h1>
+<p>The method is not allowed for the requested URL.</p>
+
+C:\Users\JS>curl -X DELETE http://andrewbeatty1.pythonanywhere.com/books/332
+{"done":true}
+
+C:\Users\JS>
+
