@@ -1,6 +1,6 @@
 import requests
 import urllib.parse
-from config import config as cfg
+from config1 import config1 as cfg
 
 targetUrl = "https://en.wikipedia.org/wiki/API_key"
 
