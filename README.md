@@ -41,6 +41,6 @@
                 End
 
 # Instructions to run Labs:
-                Labs are mostly python files (These can be identified a .py extension). To run these you will need to install python.
-                
+                Labs are mostly python files (These can be identified a .py extension). To run these you will need capability to run python on your                  machine. You should also download the full folder contents as there are some dependant files lab folders. After downloading the lab                  folder run the .py file. 
+                For example, to run trains_lab.py, you should download the lab01_trains folder and run the trains_lab.py from the folder.
 
