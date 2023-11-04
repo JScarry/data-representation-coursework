@@ -40,3 +40,7 @@
                 Update comment seen on Github is "updated by prog"
                 End
 
+# Instructions to run Labs:
+                Labs are mostly python files (These can be identified a .py extension). To run these you will need to install python.
+                
+
