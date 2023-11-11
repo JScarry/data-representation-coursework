@@ -1,0 +1,236 @@
+
+C:\Users\JS\cmder
+λ curl http://127.0.0.1:5000
+Hello
+C:\Users\JS\cmder
+λ curl http://127.0.0.1:5000/books
+served by get All()
+C:\Users\JS\cmder
+λ curl http://127.0.0.1:5000/books/123
+served by find by id with id 123
+C:\Users\JS\cmder
+λ curl -X "POST" http://127.0.0.1:5000/books
+served by create
+C:\Users\JS\cmder
+λ curl -X PUT http://127.0.0.1:5000/books/121212
+served by update with id 121212
+C:\Users\JS\cmder
+λ curl -X DELETE http://127.0.0.1:5000/books/121212
+served by delete with id 121212
+C:\Users\JS\cmder
+λ curl http://127.0.0.1:5000/cars
+[
+  {
+    "Make": "Ford",
+    "Model": "Fiesta",
+    "Price": 1000,
+    "id": 1
+  },
+  {
+    "Make": "Ford",
+    "Model": "Focus",
+    "Price": 1002,
+    "id": 2
+  },
+  {
+    "Make": "Toyota",
+    "Model": "Corolla",
+    "Price": 1022,
+    "id": 3
+  },
+  {
+    "Make": "VW",
+    "Model": "Polo",
+    "Price": 1333,
+    "id": 4
+  },
+  {
+    "Make": "VW",
+    "Model": "Golf",
+    "Price": 1033,
+    "id": 5
+  },
+  {
+    "Make": "Ford",
+    "Model": "Fiesta",
+    "Price": 2100,
+    "id": 6
+  },
+  {
+    "Make": "Volvo",
+    "Model": "c30",
+    "Price": 100,
+    "id": 7
+  },
+  {
+    "Make": "Audi",
+    "Model": "a1",
+    "Price": 10000,
+    "id": 8
+  }
+]
+
+C:\Users\JS\cmder
+λ curl http://127.0.0.1:5000/cars/1
+served by find by id with id 1
+C:\Users\JS\cmder
+λ curl http://127.0.0.1:5000/cars/1
+{
+  "Make": "Ford",
+  "Model": "Fiesta",
+  "Price": 1000,
+  "id": 1
+}
+
+C:\Users\JS\cmder
+λ curl -X "POST" http://127.0.0.1:5000/cars
+<!doctype html>
+<html lang=en>
+<title>405 Method Not Allowed</title>
+<h1>Method Not Allowed</h1>
+<p>The method is not allowed for the requested URL.</p>
+
+C:\Users\JS\cmder
+λ curl -X "POST" http://127.0.0.1:5000/cars
+{
+  "Make": "QQQ",
+  "Model": "WWW",
+  "Price": 2222,
+  "id": 9
+}
+
+C:\Users\JS\cmder
+λ curl -X "POST" -d "{\"Make\":\"test\",\"Model\":\"testb\",\"Price\":1111}" http://127.0.0.1:5000/cars
+{
+  "Make": "QQQ",
+  "Model": "WWW",
+  "Price": 2222,
+  "id": 10
+}
+
+C:\Users\JS\cmder
+λ curl -X "POST" -H "content-type:application/json" -d "{\"Make\":\"test\",\"Model\":\"testb\",\"Price\":1111}" http://127.0.0.1:5000/cars
+{
+  "Make": "test",
+  "Model": "testb",
+  "Price": 1111,
+  "id": 9
+}
+
+C:\Users\JS\cmder
+λ curl -X PUT -d "{\"Make\":\"Frd\",\"Model\":\"Mondeo\",\"Price\":999}" -H "content-type:application/json" http://127.0.0.1:5000/cars/1
+{
+  "Make": "Frd",
+  "Model": "Mondeo",
+  "Price": 999,
+  "id": 1
+}
+
+C:\Users\JS\cmder
+λ curl http://127.0.0.1:5000/cars
+[
+  {
+    "Make": "Frd",
+    "Model": "Mondeo",
+    "Price": 999,
+    "id": 1
+  },
+  {
+    "Make": "Ford",
+    "Model": "Focus",
+    "Price": 1002,
+    "id": 2
+  },
+  {
+    "Make": "Toyota",
+    "Model": "Corolla",
+    "Price": 1022,
+    "id": 3
+  },
+  {
+    "Make": "VW",
+    "Model": "Polo",
+    "Price": 1333,
+    "id": 4
+  },
+  {
+    "Make": "VW",
+    "Model": "Golf",
+    "Price": 1033,
+    "id": 5
+  },
+  {
+    "Make": "Ford",
+    "Model": "Fiesta",
+    "Price": 2100,
+    "id": 6
+  },
+  {
+    "Make": "Volvo",
+    "Model": "c30",
+    "Price": 100,
+    "id": 7
+  },
+  {
+    "Make": "Audi",
+    "Model": "a1",
+    "Price": 10000,
+    "id": 8
+  }
+]
+
+C:\Users\JS\cmder
+λ curl -X DELETE http://127.0.0.1:5000/cars/1
+{
+  "done": true
+}
+
+C:\Users\JS\cmder
+λ curl http://127.0.0.1:5000/cars
+[
+  {
+    "Make": "Ford",
+    "Model": "Focus",
+    "Price": 1002,
+    "id": 2
+  },
+  {
+    "Make": "Toyota",
+    "Model": "Corolla",
+    "Price": 1022,
+    "id": 3
+  },
+  {
+    "Make": "VW",
+    "Model": "Polo",
+    "Price": 1333,
+    "id": 4
+  },
+  {
+    "Make": "VW",
+    "Model": "Golf",
+    "Price": 1033,
+    "id": 5
+  },
+  {
+    "Make": "Ford",
+    "Model": "Fiesta",
+    "Price": 2100,
+    "id": 6
+  },
+  {
+    "Make": "Volvo",
+    "Model": "c30",
+    "Price": 100,
+    "id": 7
+  },
+  {
+    "Make": "Audi",
+    "Model": "a1",
+    "Price": 10000,
+    "id": 8
+  }
+]
+
+C:\Users\JS\cmder
+λ
